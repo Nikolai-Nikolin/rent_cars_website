@@ -1,0 +1,1627 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-nav-grey1: #596780;
+    --header-nav-grey2: #C3D4E966;
+    --body-main-color: #F6F7F9;
+    --left-car-bg: #54A6FF;
+    --right-car-bg: #3563E9;
+    --paragraphs-grey: #90A3BF;
+    --footer-color: #13131399;
+}
+
+body {
+    background-color: var(--body-main-color);
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+main {
+    padding: 1.5rem 4rem;
+    display: flex;
+}
+
+
+/* ================ HEADER ================ */
+header {
+    width: 100%;
+    background-color: white;
+}
+
+.header-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.header-nav > img {
+    padding: 0 3rem 0 2rem;
+}
+
+.header-nav button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.searching-main {
+    display: flex;
+    justify-content: center;
+    width: 36%;
+    margin: 0 30px;
+}
+
+.searching {
+    width: 100%;
+    height: 44px;
+    border: 1px solid var(--header-nav-grey2);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.magnifier {
+    background-image: url('../img/search-normal.svg');
+    background-size: 100%;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    border: none;
+    margin-right: 10px;
+}
+
+.searching > input {
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--header-nav-grey1);
+}
+
+::-moz-placeholder {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--header-nav-grey1);
+    text-overflow:ellipsis;
+}
+
+:-moz-placeholder {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--header-nav-grey1);
+    text-overflow:ellipsis;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.875rem;
+    color: var(--header-nav-grey1);
+    text-overflow:ellipsis;
+}
+
+input[placeholder] {
+    text-overflow:ellipsis;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.filter {
+    background-image: url('../img/filter.svg');
+    background-size: 100%;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    border: none;
+    margin-left: auto;
+}
+
+.filter-responsive, .burger-menu, .burger-icons {
+    display: none;
+}
+
+.header-social {
+    width: 240px;
+    height: 44px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+}
+
+.profile-menu {
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    list-style: none;
+    z-index: 999;
+    background-color: rgba(238, 238, 238, 0.7);
+    backdrop-filter: blur(3px);
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.active-profile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--header-nav-grey1);
+}
+
+.profile-menu li {
+    padding: 5px 0;
+    border-radius: 7px;
+}
+
+.profile-menu li:hover {
+    border-top: 2px solid var(--header-nav-grey1);
+    border-bottom: 2px solid var(--header-nav-grey1);
+}
+
+.profile-menu img {
+    width: 15%;
+    margin-right: 5px;
+}
+
+.socials-head {
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+    border: 1px solid var(--header-nav-grey2);
+    padding: 10px;
+    background-color: transparent;
+}
+
+.heart {
+    background-image: url('../img/heart.svg');
+}
+
+.bell {
+    background-image: url('../img/notification.svg');
+    padding: 10px;
+}
+
+.settings {
+    background-image: url('../img/setting-2.svg');
+}
+
+.avatar {
+    background-image: url('../img/avatar.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 40px;
+    border: none;
+}
+
+/* ================ HEADER RESPONSIVE ================ */
+@media screen and (max-width: 790px) {
+    .header-nav > img {
+        padding: 0;
+    }
+
+    .profile-menu {
+        width: 140px;
+        height: 108px;
+        left: 100px;
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width: 640px) {
+    .header-nav > img {
+        width: 108px;
+        height: 28px;
+        justify-content: center;
+    }
+
+    .searching-main {
+        width: 70%;
+        gap: 15px;
+    }
+
+    .searching {
+        width: 80%;
+        height: 48px;
+        border-radius: 10px;
+    }
+    
+    .socials-head, .hidden1 {
+        display: none;
+    }
+
+    .header-social {
+        width: 60px;
+        height: 28px;
+        margin-left: auto;
+    }
+
+    .avatar {
+        margin-left: auto;
+        width: 28px;
+        height: 28px;
+    }
+
+    .filter-responsive {
+        display: block;
+        background-image: url('../img/filter.svg');
+        background-size: 50%;
+        background-position: center;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 48px;
+        border: 1px solid var(--header-nav-grey2);
+        border-radius: 10px;
+    }
+
+    .burger-menu {
+        display: block;
+        background-image: url('../img/menu.svg');
+        background-size: 100%;
+        background-position: center;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        border: none;
+        margin-left: auto;
+    }
+
+    .burger-icons {
+        display: block;
+    }
+
+    .burger-icons:hover {
+        cursor: pointer;
+        scale: 1.05;
+    }
+
+    .burger-menu-container {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 35px;
+        left: -32px;
+        width: 88px;
+        height: 24px;
+        visibility: hidden;
+    }
+
+    .burger-menu-container-show {
+        visibility: visible;
+    }
+
+    .burger-icons{
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        border-radius: 40px;
+        border: 1px solid var(--header-nav-grey2);
+        outline: none;
+        outline-offset: none;
+        background-color: transparent;
+    }
+
+    .burger-heart {
+        background-image: url('../img/heart.svg');
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .burger-bell {
+        background-image: url('../img/notification.svg');
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .burger-settings {
+        background-image: url('../img/setting-2.svg');
+        opacity: 0;
+        transition: 0.7s;
+    }
+
+    .burger-settings-shown {
+        opacity: 1;
+        transition: 0.7s;
+    }
+
+    .burger-bell-shown {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .burger-heart-shown {
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    .profile-menu {
+        top: 70px;
+        left: -60px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .header-nav {
+        height: 300px;
+        align-items: baseline;
+        padding: 1.5rem;
+    }
+
+    .header-social {
+        margin-bottom: auto;
+    }
+
+    .active-profile-menu {
+        flex-direction: row;
+        width: 300px;
+        height: 40px;
+    }
+
+    .profile-menu {
+        top: 30px;
+        left: -242px;
+    }
+
+    .profile-menu img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .profile-menu li {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .searching-main {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 100px;
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .burger-menu-container {
+        top: 2px;
+        left: -100px;
+    }
+}
+
+/* ================ SIDEBAR ================ */
+.sidebar {
+    display: flex;
+    background-color: white;
+    margin-right: 30px;
+    padding: 30px;
+    width: 30%;
+    border-top: 2px solid var(--body-main-color);
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.cars-checkbox {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+}
+
+.sidebar span {
+    color: #596780;
+    font-weight: 600;
+}
+
+.sidebar-paragraph {
+    color: var(--paragraphs-grey);
+}
+
+.sidebar-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.range {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.range-paragraph {
+    color: #596780;
+    font-weight: 600;
+}
+
+.title {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--paragraphs-grey);
+    margin-bottom: 30px;
+}
+
+.main-properties-with-sidebar {
+    padding: 0 2rem 0 0;
+}
+
+/* ================ SIDEBAR RESPONSIVE ================ */
+@media screen and (max-width: 1199px) {
+    .sidebar li {
+        font-size: 1rem;
+    }
+
+    .cars-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+
+    .range {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .sidebar li, .sidebar-price p {
+        font-size: 0.875rem;
+    }
+
+    .cars-checkbox {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .sidebar {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .sidebar li, .sidebar-price p {
+        font-size: 0.75rem;
+    }
+
+    .cars-checkbox {
+        width: 12px;
+        height: 12px;
+    }
+
+    .title {
+        font-size: 0.5rem;
+    }
+
+    .sidebar li {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .sidebar, .active {
+        position: absolute;
+        margin-right: 0;
+        z-index: 999;
+        opacity: 0.9;
+        border-radius: 0 0 10px 0;
+    }
+
+    .content-with-sidebar {
+        min-width: 100%;
+        padding-left: 2rem;
+    }
+
+    .main-properties-with-sidebar {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .content-with-sidebar {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+   }
+
+   .main-content-container {
+    padding-right: 0.5rem;
+   }
+
+   .active {
+    border-radius: 10px;
+    width: 100%;
+    gap: 20px;
+    top: 180px;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 50px 5px rgba(128, 128, 128, 0.499);
+   }
+
+   .active ul {
+    margin-bottom: 0;
+   }
+
+   .active li, .title {
+    margin-bottom: 15px;
+   }
+
+   .sidebar-price {
+    width: 30%;
+    padding-right: 10px;
+   }
+}
+
+@media screen and (max-width: 480px) {
+    .active li, .title {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-price p {
+        font-size: 0.625rem;
+    }
+
+    .sidebar li {
+        column-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .sidebar span, .sidebar p {
+        font-size: 0.625rem;
+    }
+}
+
+/* ================ MAIN UPPER CONTAINER ================ */
+.main-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-with-sidebar {
+    width: 74%;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.upper-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    gap: 30px;
+    overflow-x: scroll;
+}
+
+.upper-container::-webkit-scrollbar { 
+    width: 0 !important;
+}
+
+.upper-container {
+    overflow: -moz-scrollbars-none;
+}
+
+.upper-container {
+    -ms-overflow-style: none;
+}
+
+.upper-container h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: -3%;
+    margin-bottom: 10px;
+}
+
+.left-card {
+    background-image: url(../img/Screenshot\ 2023-10-09\ 141222.png);
+    background-size: cover;
+    width: 50%;
+    background-color: var(--left-car-bg);
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.card-description {
+    width: 50%;
+}
+
+.left-card button {
+    width: 120px;
+    height: 44px;
+    margin-top: 20px;
+    background-color: var(--right-car-bg);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}
+
+.upper-container button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.left-card-img {
+    background-image: url('../img/left-main-car.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 68%;
+    height: 116px;
+    margin: 0 auto;
+}
+
+.right-card {
+    background-image: url("../img/Screenshot\ 2023-10-09\ 142832.png");
+    background-size: 14%;
+    width: 50%;
+    background-color: var(--right-car-bg);
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.right-card button {
+    width: 120px;
+    height: 44px;
+    margin-top: 20px;
+    background-color: var(--left-car-bg);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}
+
+.right-card-img {
+    background-image: url('../img/right-main-car.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 57%;
+    height: 108px;
+    margin: 0 auto;
+}
+
+/* ================ MAIN UPPER CONTAINER RESPONSIVE ================ */
+@media screen and (max-width: 1320px) {
+    .card-description {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .upper-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .upper-container p {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .upper-container h2 {
+        font-size: 1rem;
+    }
+
+    .upper-container p {
+        font-size: 0.75rem;
+    }
+
+     .left-card-img {
+       height: 70px;
+    }
+
+    .right-card-img {
+        height: 70px;
+    }
+} 
+
+@media screen and (max-width: 790px) {
+    main {
+        padding: 2rem;
+    }
+
+    .left-card, .right-card {
+        min-width: 100%;
+    }
+
+    .left-card-img {
+        height: 116px;
+    }
+ 
+    .right-card-img {
+         height: 108px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .upper-container {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 180px;
+        padding: 0 1.5rem;
+        height: 285px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .upper-container {
+        height: 250px;
+    }
+
+    .left-card-img {
+        height: 70px;
+    }
+ 
+    .right-card-img {
+         height: 70px;
+    }
+
+    .card-description {
+        width: 90%;
+    }
+
+    .upper-container {
+        bottom: 30%;
+    }
+}
+
+/* ================ PICK-UP SECTION ================ */
+.pick-up-main-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pick-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
+    width: 45%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.pick-up > div {
+    display: flex;
+}
+
+.pick-up-main-container img:hover {
+    cursor: pointer;
+    scale: 1.15;
+}
+
+.pick-up-main-container p {
+    margin-left: 5px;
+}
+
+.pick-up-description {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.pick-up-main-container select {
+    outline: none;
+    border: none;
+}
+
+.div-date {
+    padding: 0 20px;
+    border-right: 2px solid var(--body-main-color);
+    border-left: 2px solid var(--body-main-color);
+}
+
+.div-date input {
+    width: 87%;
+    outline: none;
+    border: none;
+    color: var(--paragraphs-grey);
+}
+
+.pick-up-main-container h4 {
+    margin-left: 3px;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+}
+
+select:valid {
+    color: var(--paragraphs-grey);
+}
+
+select:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.pick-up-main-container button {
+    width: 60px;
+    height: 60px;
+    background-color: var(--right-car-bg);
+    background-image: url('../img/Swap.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 1px var(--header-nav-grey2);
+}
+
+.pick-up-main-container button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+/* ================ PICK-UP SECTION RESPONSIVE ================ */
+@media screen and (max-width: 1199px) {
+    .div-date {
+        padding: 0 0 0 10px;
+    }
+
+    .pick-up {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .div-date {
+        width: 40%;
+    }
+
+    .div-date input {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .pick-up-main-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pick-up {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .pick-up-main-container button {
+        position: absolute;
+        top: 95px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .pick-up {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    .pick-up-main-container {
+        margin-top: 150px;
+    }
+
+    .pick-up {
+        padding: 15px;
+    }
+
+    .pick-up-description div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pick-up-main-container {
+        margin-top: 110px;
+    }
+
+    .div-date {
+        padding-left: 5px;
+    }
+}
+
+/* ================ POPULAR CARS SECTION ================ */
+.popular-cars-main {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.popular-cars-main p {
+    color: var(--paragraphs-grey);
+    font-size: 0.875rem;
+}
+
+.popular-cars-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.popular-cars-top span {
+    color: var(--paragraphs-grey);
+}
+
+.popular-cars-top button {
+    border: none;
+    background-color: transparent;
+    color: var(--right-car-bg);
+    font-weight: 600;
+}
+
+.popular-cars-top button:hover, .like:hover {
+    cursor: pointer;
+    scale: 1.10;
+}
+
+.cars-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    gap: 30px;
+}
+
+#notice {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    z-index: 999;
+    width: 35%;
+    background-color: var(--body-main-color);
+    box-shadow: 0 0 50px 5px rgba(128, 128, 128, 0.499);
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    row-gap: 20px;
+    opacity: 0;
+}
+
+#noticeBtn {
+    width: 100px;
+    height: 30px;
+    background-color: var(--right-car-bg);
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+}
+
+#noticeBtn:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.cars-container::-webkit-scrollbar { 
+    width: 0 !important;
+}
+
+.car {
+    width: 304px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.car-name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-name h3 {
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+}
+
+.like {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/like.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+}
+
+.like-red {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/Like-red.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+}
+
+.car-img {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 65px;
+    margin-bottom: 70px;
+}
+
+.shadow {
+    width: 100%;
+    position: absolute;
+    top: 43%;
+    left: 0;
+}
+
+.car-features {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.car-features div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.car-price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.car-price p, .car-name p {
+    font-weight: 500;
+}
+
+.car-price-div div {
+    display: flex;
+    align-items: center;
+}
+
+.car-price-row {
+    display: flex;
+    align-items: center;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.car-price span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.car-price button {
+    width: 116px;
+    height: 44px;
+    background-color: var(--right-car-bg);
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+}
+
+.car-price button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+/* ================ POPULAR CARS SECTION RESPONSIVE ================ */
+@media screen and (max-width: 880px) {
+    #notice {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    #noticeBtn {
+        width: 70px;
+        height: 20px;
+    }
+
+    .popular-cars-top span {
+        font-size: 0.875rem;
+    }
+
+    .popular-cars-top button, .popular-cars-main p, .car-price button {
+        font-size: 0.75rem;
+    }
+
+    .car {
+        width: 240px;
+    }
+
+    .car span, .car h3 {
+        font-size: 1rem;
+    }
+
+    .car-img {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .car-features img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .car-price button {
+        width: 100px;
+        height: 36px;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    #notice {
+        width: 50%;
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #notice {
+        font-size: 0.75rem;
+    }
+
+    #noticeBtn {
+        width: 50px;
+        height: 20px;
+        font-size: 0.75rem;
+    }
+}
+
+/* ================ RECOMENDATION CARS SECTION ================ */
+.recomendation-cars-main {
+    margin-top: 30px;
+}
+
+.recomendation-cars-main > span {
+    color: var(--paragraphs-grey);
+    padding-left: 20px;
+}
+
+.recomendation-cars p {
+    color: var(--paragraphs-grey);
+    font-weight: 700;
+}
+
+.recomendation-cars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.recomendation-cars button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.recomendation-cars p {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.recommended-car-card {
+    width: 304px;
+    height: 388px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.shadow2 {
+    width: 100%;
+    position: absolute;
+    top: 43%;
+    left: 0;
+}
+
+.recomendation-cars-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.recomendation-car-img {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.recomendation-car-features {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.recomendation-car-features div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recomendation-cars-bottom {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.recomendation-cars-bottom button {
+    width: 156px;
+    height: 44px;
+    background-color: var(--right-car-bg);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.recomendation-cars-bottom button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.recomendation-cars-bottom span {
+    color: var(--paragraphs-grey);
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+
+/* ================ RECOMENDATION CARS SECTION RESPONSIVE ================ */
+@media screen and (max-width: 1434px) {
+    .recomendation-cars {
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .recomendation-cars-center {
+        flex-direction: row;
+        width: 100%;
+        gap: 0px;
+    }
+
+    .recomendation-car-img {
+        width: 60%;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .recomendation-car-features {
+        width: 40%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .recommended-car-card {
+        width: 38%;
+        height: 50%;
+    }
+
+    .shadow2 {
+        width: 60%;
+        top: 53%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 1008px) {
+    .recommended-car-card {
+        width: 90%;
+    }
+
+    .recomendation-cars {
+        gap: 30px;
+    }
+
+    .recomendation-car-features div {
+        margin-left: 40%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .recomendation-car-features img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .recommended-car-card span, .recommended-car-card h3 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .recommended-car-card {
+        width: 100%;
+    }
+
+    .recomendation-car-img {
+        width: 50%;
+    }
+
+    .recomendation-cars-bottom button {
+        width: 120px;
+        height: 36px;
+        font-size: 0.75rem;
+    }
+
+    .recomendation-cars-bottom span {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .recomendation-car-features div {
+        margin-left: 22%;
+        width: 100%;
+    }
+}
+
+/* ================ FOOTER ================ */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 5rem 4rem 3.5rem 4rem;
+}
+
+footer h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+footer ul, .community-responsive {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: var(--footer-color);
+}
+
+.footer-social a:hover {
+    color: var(--paragraphs-grey);
+}
+
+footer li:hover {
+    scale: 1.05;
+}
+
+.footer-main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid #13131329;
+    margin-bottom: 30px;
+}
+
+footer p {
+    color: var(--footer-color);
+    margin-top: 20px;
+    width: 53%;
+    line-height: 24px;
+}
+
+.footer-social {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 70px;
+    gap: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 85px;
+    row-gap: 30px;
+}
+
+.terms {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.terms a {
+    text-decoration: none;
+    color: black;
+}
+
+.terms h4:hover {
+    scale: 1.05;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ================ FOOTER RESPONSIVE ================ */
+@media screen and (max-width: 1140px) {
+    .footer-social {
+        width: 60%;
+    }
+
+    .footer-main-container p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .footer-main-container {
+        flex-direction: column;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap-reverse;
+    }
+
+    .terms {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    footer {
+        padding: 3rem 2rem 1.5rem 2rem;
+    }
+
+}
+
+@media screen and (max-width: 455px) {
+    .footer-main-container {
+        border-bottom: none;
+    }
+
+    footer img {
+        width: 108px;
+        height: 28px;
+    }
+
+    footer h4, footer p {
+        font-size: 0.75rem;
+    }
+
+    footer p {
+        color: var(--paragraphs-grey);
+    }
+
+    .footer-social a {
+        color: var(--paragraphs-grey);
+    }
+    
+    .footer-social a:hover {
+        color: var(--footer-color);
+    }
+
+    .community {
+        display: none;
+    }
+
+    .community-responsive {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer-main-container p {
+        width: 80%;
+    }
+}

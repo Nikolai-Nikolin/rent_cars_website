@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Morent</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- ================ HEADER ================ -->
+    <header>
+        <div class="header-nav">
+            <img src="./img/Logo.svg" alt="logo">
+
+            <div class="searching-main">
+                <form class="searching" method="get">
+                    <button class="magnifier" type="submit"></button>
+                    <input type="search" placeholder="Search something here">
+                    <button class="filter filter-btn hidden1"></button>
+                </form>
+
+                <button class="filter-responsive filter-btn"></button>
+            </div>
+
+            
+
+            <div class="header-social">
+                <ul class="profile-menu hidden">
+                    <li>
+                        <a href="#">
+                            <img src="./img/your-profile.png" alt="profile">Your Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/change-account.png" alt="change">Change Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/exit.png" alt="">Exit
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="burger-menu-container">
+                    <input class="burger-heart burger-icons" type="button">
+                    <input class="burger-bell burger-icons" type="button">
+                    <input class="burger-settings burger-icons" type="button">
+                </div>
+
+                <button class="burger-menu"></button>
+                <button class="heart socials-head"></button>
+                <button class="bell socials-head"></button>
+                <button class="settings socials-head"></button>
+                <button class="avatar"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================ MAIN ================ -->
+    <main id="mainBlock">
+
+        <!-- === sidebar === -->
+        <div class="sidebar hidden">
+            <ul>
+                <h5 class="title">T Y P E</h5>
+                <li>
+                    <input type="checkbox" name="type" value="sport" class="cars-checkbox">
+                    <span>Sport</span>
+                    <p class="sidebar-paragraph">(3)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="type" value="suv" class="cars-checkbox">
+                    <span>SUV</span>
+                    <p class="sidebar-paragraph">(8)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="type" value="mpv" class="cars-checkbox">
+                    <span>MPV</span>
+                    <p class="sidebar-paragraph">(0)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="type" value="sedan" class="cars-checkbox">
+                    <span>Sedan</span>
+                    <p class="sidebar-paragraph">(3)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="type" value="coupe" class="cars-checkbox">
+                    <span>Coupe</span>
+                    <p class="sidebar-paragraph">(0)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="type" value="hatchback" class="cars-checkbox">
+                    <span>Hatchback</span>
+                    <p class="sidebar-paragraph">(2)</p>
+                </li>
+            </ul>
+
+            <ul>
+                <h5 class="title">C A P A C I T Y</h5>
+                <li>
+                    <input type="checkbox" name="capacity" value="2" class="cars-checkbox">
+                    <span>2 Person</span>
+                    <p class="sidebar-paragraph">(3)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="capacity" value="4" class="cars-checkbox">
+                    <span>4 Person</span>
+                    <p class="sidebar-paragraph">(5)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="capacity" value="6" class="cars-checkbox">
+                    <span>6 Person</span>
+                    <p class="sidebar-paragraph">(6)</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="capacity" value="8" class="cars-checkbox">
+                    <span>8 or More</span>
+                    <p class="sidebar-paragraph">(0)</p>
+                </li>
+            </ul>
+
+            <div class="sidebar-price">
+                <ul>
+                    <h5 class="title">C A T E G O R Y</h5>
+                    <li>
+                        <input type="checkbox" name="category" value="popular" class="cars-checkbox">
+                        <span>Popular</span>
+                        <p class="sidebar-paragraph">(4)</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="category" value="recomend" class="cars-checkbox">
+                        <span>Recomend</span>
+                        <p class="sidebar-paragraph">(12)</p>
+                    </li>
+                </ul>
+
+                <h5 class="title">P R I C E</h5>
+                <input type="range" class="range">
+                <p class="range-paragraph">Max. $100.00</p>
+            </div>
+        </div>
+
+        <!-- === main content === -->
+        <div class="main-content-container">
+            <div class="upper-container hidden-blocks">
+                <div class="left-card">
+                    <div class="card-description">
+                        <h2>The Best Platform for Car Rental</h2>
+                        <p>Ease of doing a car rental safely and reliably. 
+                            Of course at a low price.</p>
+                        <button>Rental Car</button>
+                    </div>
+                    <div class="left-card-img"></div>
+                </div>
+
+
+                <div class="right-card">
+                    <div class="card-description">
+                        <h2>Easy way to rent a car at a low price</h2>
+                        <p>Providing cheap car rental services and safe and 
+                            comfortable facilities.</p>
+                        <button>Rental Car</button>
+                    </div>
+                    <div class="right-card-img"></div>
+                </div>
+            </div>
+
+            <!-- ================ PICK-UP SECTION ================ -->
+            <div class="pick-up-main-container">
+                <div class="pick-up">
+                    <div>
+                        <img src="./img/mark.svg" alt="mark">
+                        <p>Pick - Up</p>
+                    </div>
+
+                    <div class="pick-up-description">
+                        <div>
+                            <h4>Locations</h4>
+                            <select>
+                                <option value="Select your city">Select your city</option>
+                                <option value="Dushanbe">Dushanbe</option>
+                                <option value="Khujand">Khujand</option>
+                                <option value="Gissar">Gissar</option>
+                                <option value="Bokhtar">Bokhtar</option>
+                            </select>
+                        </div>
+
+                        <div class="div-date">
+                            <h4>Date</h4>
+                            <input type="date">
+                        </div>
+
+                        <div>
+                            <h4>Time</h4>
+                            <select>
+                                <option value="Select your time">Select your time</option>
+                                <option value="1 hour">1 hour</option>
+                                <option value="2 hours">2 hours</option>
+                                <option value="5 hours">5 hours</option>
+                                <option value="12 hours">12 hours</option>
+                                <option value="24 hours">24 hours</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button></button>
+
+                <div class="pick-up">
+                    <div>
+                        <img src="./img/mark (1).svg" alt="mark1">
+                        <p>Drop-Off</p>
+                    </div>
+        
+                    <div class="pick-up-description">
+                        <div>
+                            <h4>Locations</h4>
+                            <select>
+                                <option value="Select your city">Select your city</option>
+                                <option value="Dushanbe">Dushanbe</option>
+                                <option value="Khujand">Khujand</option>
+                                <option value="Gissar">Gissar</option>
+                                <option value="Bokhtar">Bokhtar</option>
+                            </select>
+                        </div>
+        
+                        <div class="div-date">
+                            <h4>Date</h4>
+                            <input type="date">
+                        </div>
+        
+                        <div>
+                            <h4>Time</h4>
+                            <select>
+                                <option value="Select your time">Select your time</option>
+                                <option value="1 hour">1 hour</option>
+                                <option value="2 hours">2 hours</option>
+                                <option value="5 hours">5 hours</option>
+                                <option value="12 hours">12 hours</option>
+                                <option value="24 hours">24 hours</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ POPULAR CARS SECTION ================ -->
+            <div class="popular-cars-main">
+                <div class="popular-cars-top">
+                    <span>Popular Car</span>
+                    <button id="viewAllBtn">View All</button>
+                </div>
+
+                <div id="notice">
+                    <span>New arrivals are coming soon, stay tuned</span>
+                    <button id="noticeBtn">Ok</button>
+                </div>
+
+                <div class="cars-container">
+                    
+                </div>
+            </div>
+
+            <!-- ================ RECOMENDATION CARS SECTION ================ -->
+            <div class="recomendation-cars-main">
+                <span>Recomendation Car</span>
+
+                <div class="recomendation-cars">
+                </div>
+
+                <div class="recomendation-cars-bottom">
+                    <button id="showBtn">Show more car</button>
+                    <span id="recomendCarsBottomSpan">120 Car</span>
+                </div>
+            </div>
+        </div>    
+    </main>
+
+    <!-- ================ FOOTER ================ -->
+    <footer>
+        <div class="footer-main-container">
+            <div>
+                <img src="./img/Logo.svg" alt="logo">
+                <p>Our vision is to provide convenience 
+                    and help increase your sales business.</p>
+            </div>
+
+            <div class="footer-social">
+                <ul>
+                    <h2>About</h2>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="#">Bussiness Relation</a></li>
+                </ul>
+
+                <ul class="community">
+                    <h2>Community</h2>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Invite a friend</a></li>
+                </ul>
+
+                <ul>
+                    <h2>Socials</h2>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+
+                <ul class="community-responsive hidden">
+                    <h2>Community</h2>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Invite a friend</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="rights">
+                <h4>©2022 MORENT. All rights reserved</h4>
+            </div>
+
+            <div class="terms">
+                <div>
+                    <a href="#"><h4>Privacy & Policy</h4></a>
+                </div>
+                <div>
+                    <a href="#"><h4>Terms & Condition</h4></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
